@@ -1,24 +1,44 @@
+/* Modal.css */
 .modal-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.75); /* Darker backdrop for better focus on the image */
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1050;  /* High z-index to keep the modal above other content */
+    overflow-y: auto; /* Enables scrolling for large images or small screens */
   }
   
   .modal-content {
-    background: white;
-    padding: 20px;
+    position: relative;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    width: auto;
+    max-width: 90%; /* Limits the max width for better viewability on wide screens*/
+    margin: 20px;
   }
   
-  .modal-content img {
+  .modal-image {
     max-height: 80vh;
-    max-width: 80vw;
+    max-width: 100%; /* Ensures the image is responsive and fits well within the modal*/
+    display: block; /* Fixes display issues */
+    border-radius: 10px 10px 0 0; /* Rounds the top corners */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
   }
   
