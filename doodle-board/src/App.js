@@ -3,7 +3,7 @@ import Masonry from 'react-masonry-css';
 import DoodleCard from './DoodleCard';
 import './App.css';
 
-// Shuffle function definition
+// Shuffle function 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -18,14 +18,14 @@ function App() {
     const defaultDoodles = [
       { id: 1, title: 'Fire Noodle - by Julie', image: '/images/food1.jpeg' },
       { id: 2, title: 'Hi Dood by Jane', image: '/images/art1.jpg' },
-      { id: 4, title: 'Dinner at Konbon by Cait', image: '/images/art2.jpg' },
+      { id: 4, title: 'Dinner at Konban by Cait', image: '/images/art2.jpg' },
       { id: 5, title: 'UDON Noodles', image: '/images/doodle1.jpg' },
       { id: 6, title: 'Elonara Perfume - New York', image: '/images/doodle2.jpg' },
       { id: 7, title: 'Fuled by Ramen', image: '/images/art3.jpeg' },
       { id: 8, title: 'Sketching Sketches', image: '/images/doodle3.jpeg' },
       { id: 9, title: 'Street in Korea - by Jun', image: '/images/art4.jpeg' }
     ];
-    shuffleArray(defaultDoodles);  // Shuffle right after defining
+    shuffleArray(defaultDoodles);  // Shuffle right after refreshing
     setDoodles(defaultDoodles);
   }, []);
 
